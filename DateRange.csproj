@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5D9C8F61-80D1-45BB-9343-58FEBD09B98A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DateRange</RootNamespace>
+    <AssemblyName>DateRange</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Units\Quarter.cs" />
+    <Compile Include="Tests\when_getting_quarter_based_relative_dates.cs" />
+    <Compile Include="Units\Hour.cs" />
+    <Compile Include="Units\Week.cs" />
+    <Compile Include="Tests\when_getting_hour_based_relative_dates.cs" />
+    <Compile Include="Tests\when_getting_year_based_relative_dates.cs" />
+    <Compile Include="Tests\when_getting_week_based_relative_dates.cs" />
+    <Compile Include="Tenses\Tense.cs" />
+    <Compile Include="Units\Day.cs" />
+    <Compile Include="Places\End.cs" />
+    <Compile Include="Units\Month.cs" />
+    <Compile Include="Tenses\Next.cs" />
+    <Compile Include="Places\Place.cs" />
+    <Compile Include="Tenses\Prev.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Places\Start.cs" />
+    <Compile Include="Tenses\This.cs" />
+    <Compile Include="Units\Unit.cs" />
+    <Compile Include="Tests\when_getting_day_based_relative_dates.cs" />
+    <Compile Include="Tests\when_getting_month_based_relative_dates.cs" />
+    <Compile Include="Units\Year.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

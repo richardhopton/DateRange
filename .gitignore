@@ -1,0 +1,26 @@
+#.net
+[Oo]bj
+[Bb]in
+
+#nuget
+packages
+
+#user specific
+*.user
+*.suo
+
+#tooling
+*.ncrunchsolution
+*.ncrunchproject
+_NCrunch_*
+_ReSharper.*
+*.DotSettings
+*.dotCover
+[Tt]est[Rr]esult*
+*.cache
+
+#OS
+*.bak
+
+#Mac
+.DS_Store
